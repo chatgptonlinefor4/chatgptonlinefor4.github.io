@@ -1,0 +1,543 @@
+:root {
+    --primary: #7B2FDD;
+    --secondary: #2D3FDE;
+    --accent: #00f7ff;
+    --dark: #0B1120;
+    --darker: #060911;
+    --text-light: #E2E8F0;
+    --gradient: linear-gradient(135deg, var(--primary), var(--secondary));
+}
+
+/* Base Styles */
+body {
+    font-family: 'Inter', -apple-system, system-ui, sans-serif;
+    color: var(--text-light);
+    background-color: var(--darker);
+    line-height: 1.6;
+}
+
+/* Navigation */
+.navbar {
+    background: transparent;
+    padding: 1.5rem 0;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.navbar.scrolled {
+    background: rgba(11, 17, 32, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+.nav-link {
+    color: var(--text-light) !important;
+    font-weight: 500;
+    margin: 0 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--accent) !important;
+}
+
+.brand-text {
+    font-weight: 800;
+    color: var(--accent);
+}
+
+/* Background Layers */
+.background-layers {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.bg-layer-1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('22.webp');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+}
+
+.bg-layer-2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(11, 17, 32, 0.9), rgba(6, 9, 17, 0.95));
+}
+
+.bg-layer-3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 50%, transparent 0%, var(--darker) 100%);
+}
+
+/* Hero Section */
+#hero {
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    padding: 8rem 0;
+    background-color: var(--darker);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, var(--accent), #fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.hero-image {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Buttons */
+.btn-primary {
+    background: var(--gradient);
+    border: none;
+    padding: 1rem 2rem;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(123, 47, 221, 0.3);
+}
+
+/* Metrics Section */
+.metrics-card {
+    background: rgba(11, 17, 32, 0.7);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    height: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.metrics-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
+}
+
+.metric-value {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+}
+
+/* Contact Form */
+.contact-form .form-control {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-light);
+    padding: 1rem;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.contact-form .form-control:focus {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(0, 247, 255, 0.1);
+}
+
+.contact-form .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Footer */
+footer {
+    background: var(--dark);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-light);
+    padding: 4rem 0;
+    position: relative;
+    z-index: 2;
+}
+
+/* Particles */
+.particle {
+    position: absolute;
+    border-radius: 50%;
+    background: var(--accent);
+    opacity: 0.1;
+    pointer-events: none;
+    z-index: 2;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(180deg); }
+    100% { transform: translateY(0px) rotate(360deg); }
+}
+
+/* Sections */
+section {
+    position: relative;
+    z-index: 2;
+}
+
+/* Problematics & Solution Sections */
+#problematics, #solution {
+    background-color: var(--darker); /* Consistent background */
+}
+
+#problematics .lead,
+#solution .lead {
+    color: var(--text-light);
+    opacity: 0.8;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+#problematics ul,
+#solution ul {
+    list-style: none; /* Remove default list styling */
+    padding-left: 0; /* Reset default padding */
+}
+
+#problematics li,
+#solution li {
+    display: flex; /* Use flexbox for icon alignment */
+    align-items: flex-start; /* Align items to the start of the line */
+    margin-bottom: 1rem;
+}
+
+#problematics li i,
+#solution li i {
+    margin-right: 0.75rem; /* Space between icon and text */
+    font-size: 1rem; /* Icon size */
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    #hero {
+        padding: 6rem 0;
+    }
+
+    .hero-image img {
+        margin-top: 2rem;
+    }
+
+    #problematics .lead,
+    #solution .lead {
+        font-size: 1rem; /* Slightly smaller lead text on smaller screens */
+    }
+}
+
+
+
+/* Обновленные стили для hero секции */
+#hero {
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-bg-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8));
+    backdrop-filter: blur(5px);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+
+/* Общие стили для секций */
+.py-6 {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.section-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    opacity: 0.8;
+}
+
+/* Стили для карточек проблематики */
+.problem-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 2rem;
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.problem-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border-color: var(--accent);
+}
+
+.problem-icon {
+    font-size: 2.5rem;
+    color: var(--accent);
+    margin-bottom: 1.5rem;
+}
+
+.problem-card h3 {
+    color: var(--text-light);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.problem-card p {
+    color: var(--text-light);
+    opacity: 0.8;
+    margin-bottom: 0;
+}
+
+/* Стили для карточек решения */
+.bg-gradient {
+    background: linear-gradient(135deg, rgba(11, 17, 32, 0.95), rgba(6, 9, 17, 0.98));
+}
+
+.solution-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 2rem;
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+.solution-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border-color: var(--accent);
+}
+
+.solution-icon {
+    font-size: 2.5rem;
+    color: var(--accent);
+    margin-bottom: 1.5rem;
+}
+
+.solution-card h3 {
+    color: var(--text-light);
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.solution-card p {
+    color: var(--text-light);
+    opacity: 0.8;
+    margin-bottom: 0;
+    font-size: 0.95rem;
+}
+
+/* Медиа-запросы для адаптивности */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .problem-card,
+    .solution-card {
+        padding: 1.5rem;
+    }
+}
+
+
+.navbar.scrolled {
+    background: rgba(11, 17, 32, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+footer {
+    background: var(--dark);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-light);
+    padding: 4rem 0;
+    position: relative;
+    z-index: 2;
+}
+
+footer h4 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+footer p {
+    opacity: 0.8;
+    margin-bottom: 0.5rem;
+}
+
+.social-icons a {
+    color: var(--text-light);
+    margin-right: 1rem;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--accent);
+}
+
+
+.realization-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 2rem;
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+.realization-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border-color: var(--accent);
+}
+
+.realization-icon {
+    font-size: 2.5rem;
+    color: var(--accent);
+    margin-bottom: 1.5rem;
+}
+
+.realization-card h3 {
+    color: var(--text-light);
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.realization-card p {
+    color: var(--text-light);
+    opacity: 0.8;
+    margin-bottom: 0;
+    font-size: 0.95rem;
+}
+
+
+/* Network background container */
+.network-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Node styling */
+.node {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: var(--accent);
+    border-radius: 50%;
+    opacity: 0.7;
+    animation: node-flicker 2s infinite alternate;
+}
+
+/* Connection styling */
+.connection {
+    position: absolute;
+    width: 2px;
+    background-color: var(--accent);
+    opacity: 0.5;
+    animation: connection-flicker 3s infinite alternate;
+}
+
+/* Node flicker animation */
+@keyframes node-flicker {
+    0% { opacity: 0.7; }
+    100% { opacity: 1; }
+}
+
+/* Connection flicker animation */
+@keyframes connection-flicker {
+    0% { opacity: 0.5; }
+    100% { opacity: 0.8; }
+}
