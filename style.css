@@ -18,28 +18,10 @@ body {
 
 /* Navigation */
 .navbar {
-    background: transparent;
-    padding: 1.5rem 0;
-    transition: all 0.3s ease;
+
     z-index: 1000;
 }
 
-.navbar.scrolled {
-    background: rgba(11, 17, 32, 0.95);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
-}
-
-.nav-link {
-    color: var(--text-light) !important;
-    font-weight: 500;
-    margin: 0 1rem;
-    transition: color 0.3s ease;
-}
-
-.nav-link:hover {
-    color: var(--accent) !important;
-}
 
 .brand-text {
     font-weight: 800;
