@@ -16,7 +16,7 @@ body {
     line-height: 1.6;
 }
 
-/* Updated Navbar Styles */
+/* Navbar with Logo */
 .navbar {
     position: fixed;
     top: 20px;
@@ -27,7 +27,7 @@ body {
     background: rgba(11, 17, 32, 0.7);
     backdrop-filter: blur(10px);
     border-radius: 20px;
-    padding: 1rem 2rem;
+    padding: 0.75rem 2rem;
     z-index: 1000;
     transition: all 0.3s ease;
 }
@@ -37,20 +37,45 @@ body {
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
 
-.brand-text {
-    font-weight: 800;
-    color: var(--accent);
+.navbar-brand {
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.logo-container {
+    height: 100%;
+    width: auto;
+    aspect-ratio: 5/1;
+}
+
+.logo-container img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
 }
 
 .nav-link {
     color: var(--text-light);
     opacity: 0.8;
     transition: opacity 0.3s ease;
+    padding: 0.5rem 1rem;
 }
 
 .nav-link:hover {
     color: var(--accent);
     opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0.5rem 1rem;
+    }
+    
+    .navbar-brand {
+        height: 32px; /* Smaller logo on mobile */
+    }
 }
 
 /* Background Layers */
