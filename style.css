@@ -541,3 +541,40 @@ footer p {
     0% { opacity: 0.5; }
     100% { opacity: 0.8; }
 }
+
+
+
+/* Стили для карточек результатов */
+.result-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 2rem;
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+.result-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border-color: var(--accent);
+}
+
+.result-card img {
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+}
+
+.result-card h3 {
+    color: var(--text-light);
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.result-card p {
+    color: var(--text-light);
+    opacity: 0.8;
+    margin-bottom: 0;
+    font-size: 0.95rem;
+}
