@@ -83,7 +83,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle at 50% 50%, transparent 0%, var(--darker) 100%);
+    background: radial-gradient(circle at 50% 50%, transparent 0%, var(--darker) 50%);
 }
 
 /* Hero Section */
