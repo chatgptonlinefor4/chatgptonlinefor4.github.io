@@ -16,16 +16,41 @@ body {
     line-height: 1.6;
 }
 
-/* Navigation */
+/* Updated Navbar Styles */
 .navbar {
-
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 1200px;
+    background: rgba(11, 17, 32, 0.7);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 1rem 2rem;
     z-index: 1000;
+    transition: all 0.3s ease;
 }
 
+.navbar.scrolled {
+    background: rgba(11, 17, 32, 0.95);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
 
 .brand-text {
     font-weight: 800;
     color: var(--accent);
+}
+
+.nav-link {
+    color: var(--text-light);
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--accent);
+    opacity: 1;
 }
 
 /* Background Layers */
